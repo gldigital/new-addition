@@ -12,33 +12,44 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+p, h2 {
+    font-family: 'Oxygen', sans-serif;
+    
+}
+
 .btn-lg {
     margin-top: 25px;
 }
 
+.questionAnswer {
+    padding: 20px 10px;
+
+}
+
 .sentence, .guess {
-    font-size: 20px;
+    font-size: 30px;
 } 
 .prizeAnswer {
-    margin: 20px 0px;
+    margin: 30px 0px;
     padding: 30px 10px;
     border: 1px solid rgba(255, 255, 255, 0.61);
     border-radius: 5px;
 }
 
-#theGif img {
-    width: 350px;
+.theGif img {
+    max-width: 300px;
     padding-top: 15px;
 }
 
 .imageClue img {
     width: 350px;
-    padding-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    filter:blur(15px);
 }
 
-/* Prize Section */
-.prizeBG {
-    background: #000;
+.imageClue:hover img {
+    filter:blur(0px);
 }
 
 .answerText {
@@ -46,3 +57,40 @@ p {
     font-weight: bold;
 }
 
+.clue {
+    margin-top: 20px;
+}
+
+.revealH {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+}
+
+.revealP {
+    font-size: 30px;
+}
+
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+    .revealH {
+        font-size: 40px; 
+        }
+    }
+@media all and (max-width: 500px) { /* screen size until 500px */
+    .revealH {
+        font-size: 40px; 
+        }
+    }
+
+    
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+    .sentence, .guess {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+    }
+@media all and (max-width: 500px) { /* screen size until 500px */
+    .sentence, .guess {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+    }

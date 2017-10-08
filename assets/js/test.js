@@ -90,7 +90,7 @@ function checkLetters(letter) {
 }
 
 function imgGif() {
-    $('#theGif').html('<img id="theImg" src="https://media.giphy.com/media/fdyZ3qI0GVZC0/giphy.gif" />')
+    $('.theGif').html('<img src="https://media.giphy.com/media/fdyZ3qI0GVZC0/giphy.gif" />')
 }
 
 function roundComplete() {
@@ -105,7 +105,7 @@ function roundComplete() {
 
         imgGif();
         $(".imageClue").hide();
-        $('#theGif').show();
+        $('.theGif').show();
     }
 }
 
@@ -123,12 +123,31 @@ function imagesClue() {
 
 }
 
+function music () {
+    // Create an audio element with JavaScript
+    var audioElement = document.createElement("audio");
+    
+        // Set it's source to the location
+        // of our Captain Planet theme song file.
+        audioElement.setAttribute("src", "assets/img/Fly away Copy.m4a");
+
+        // // Theme Button
+        // $(".theme-button").on("load", function() {
+            audioElement.play();
+        // });
+
+        // Pause Button
+        $(".pause-button").on("click", function() {
+            audioElement.pause();
+        });
+}
+
 // ====================================================
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
-
-
+    
+    music();
     displayCurrentsentence();
     imagesClue();
 
@@ -158,10 +177,10 @@ $(document).ready(function () {
                     displayCurrentsentence();
                     imagesClue();
                     $(".imageClue").show();
-                    $('#theGif').hide();
+                    $('.theGif').hide();
                 }  else {
-                    $(".sentence, .guess, .nextBtn, .jumbotron").hide();
-                    $("#theGif").hide();
+                    $(".sentence, .guess, .questionAnswer, .nextBtn, .jumbotron").hide();
+                    $(".theGif").hide();
                     $(".imageClue").hide();
                     $(".prizeAnswer").hide();
                     $(".clue").hide();
