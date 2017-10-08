@@ -1,13 +1,44 @@
-/* Prize Section */
-.prizeBG {
-    background: #000;
+body {
+    background:  url("https://media.giphy.com/media/MYzDEybJ94M2Q/giphy.gif") no-repeat center center fixed; 
+    position: relative;
+    background-size: cover;
+    height: 100%;
+    margin: 0px;
 }
 
+h1,
+h2,
+p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-lg {
+    margin-top: 25px;
+}
+
+.sentence, .guess {
+    font-size: 20px;
+} 
 .prizeAnswer {
     margin: 20px 0px;
     padding: 30px 10px;
-    border: 1px solid #000;
+    border: 1px solid rgba(255, 255, 255, 0.61);
     border-radius: 5px;
+}
+
+#theGif img {
+    width: 350px;
+    padding-top: 15px;
+}
+
+.imageClue img {
+    width: 350px;
+    padding-top: 15px;
+}
+
+/* Prize Section */
+.prizeBG {
+    background: #000;
 }
 
 .answerText {

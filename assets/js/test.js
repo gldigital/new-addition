@@ -104,8 +104,8 @@ function roundComplete() {
         $(".prizeAnswer").html('<p class=" answerText center-text">' + displayText + '</p>');
 
         imgGif();
-
-       $('#theGif').show();
+        $(".imageClue").hide();
+        $('#theGif').show();
     }
 }
 
@@ -132,7 +132,7 @@ $(document).ready(function () {
 
     // Register Key clicks
     document.onkeyup = function(event) {
-
+    
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
     if (lettersInWord.toString() != letterLine.toString()) {
@@ -145,20 +145,27 @@ $(document).ready(function () {
 
     // On clicking next, display the next sentence
     $(document).find(".nextBtn").on("click", function() {
-        currentsentence++; // Since we have already displayed the first sentence on DOM ready
-        if (currentsentence < question.length) {
-            displayCurrentsentence();
-            imagesClue();
-            $('#theGif').hide();
-        } else {
-            $(".sentence, .guess, .nextBtn, .jumbotron").hide();
-            $("#theGif").hide();
-            $(".imageClue").hide();
-            $(".prizeAnswer").hide();
-            thePrize();
-            
-        }
-
+        
+        if (lettersInWord.toString() != letterLine.toString()) {
+            alert("You need to complete the sentence before moving on.");
+        
+            } else {
+                currentsentence++; // Since we have already displayed the first sentence on DOM ready
+                
+                if (currentsentence < question.length) {
+                    displayCurrentsentence();
+                    imagesClue();
+                    $(".imageClue").show();
+                    $('#theGif').hide();
+                }  else {
+                    $(".sentence, .guess, .nextBtn, .jumbotron").hide();
+                    $("#theGif").hide();
+                    $(".imageClue").hide();
+                    $(".prizeAnswer").hide();
+                    $(".clue").hide();
+                    thePrize();
+                }
+            }
     });
 
 });
