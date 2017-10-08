@@ -122,10 +122,12 @@ function imagesClue() {
     
 
 }
+
 // ====================================================
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
+
 
     displayCurrentsentence();
     imagesClue();
