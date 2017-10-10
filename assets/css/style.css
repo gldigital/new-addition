@@ -61,6 +61,10 @@ p, h2 {
     margin-top: 20px;
 }
 
+.fb {
+    font-size: 12px;
+}
+
 .revealH {
     font-family: 'Montserrat', sans-serif;
     font-size: 80px;

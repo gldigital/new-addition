@@ -146,7 +146,7 @@ function music () {
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
-    
+    focus();
     music();
     displayCurrentsentence();
     imagesClue();
