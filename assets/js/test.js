@@ -146,7 +146,10 @@ function music () {
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
-    $(".guess").trigger("focus");
+    $('.guess').click(function(e){
+        $(this).focus();
+    });
+
     music();
     displayCurrentsentence();
     imagesClue();
