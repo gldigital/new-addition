@@ -149,6 +149,9 @@ $(document).ready(function () {
     $('.guess').click(function(e){
         $(this).focus();
     });
+    $('#button').click(function(e) {
+        $('.guess').trigger('click');
+    });
 
     music();
     displayCurrentsentence();
