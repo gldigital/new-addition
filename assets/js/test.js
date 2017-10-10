@@ -142,16 +142,20 @@ function music () {
         });
 }
 
+function mobile() {
+    $('.guess').click(function(e){
+        $(this).focus();
+    });
+    $('p').click(function(e) {
+        $('.guess').trigger('click');
+    });
+}
+
 // ====================================================
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
-    $('.guess').click(function(e){
-        $(this).focus();
-    });
-    $('#button').click(function(e) {
-        $('.guess').trigger('click');
-    });
+    
 
     music();
     displayCurrentsentence();
@@ -159,7 +163,7 @@ $(document).ready(function () {
 
     // Register Key clicks
     document.onkeyup = function(event) {
-    
+    mobile();
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
     if (lettersInWord.toString() != letterLine.toString()) {
