@@ -142,28 +142,17 @@ function music () {
         });
 }
 
-function mobile() {
-    $('.guess').click(function(e){
-        $(this).focus();
-    });
-    $('#button').click(function(e) {
-        $('.guess').trigger('click');
-    });
-}
-
 // ====================================================
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
     
-
-    music();
+    // music();
     displayCurrentsentence();
     imagesClue();
 
     // Register Key clicks
     document.onkeyup = function(event) {
-    mobile();
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
     if (lettersInWord.toString() != letterLine.toString()) {
