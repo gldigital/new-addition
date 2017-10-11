@@ -146,7 +146,7 @@ function mobile() {
     $('.guess').click(function(e){
         $(this).focus();
     });
-    $('p').click(function(e) {
+    $('#button').click(function(e) {
         $('.guess').trigger('click');
     });
 }
