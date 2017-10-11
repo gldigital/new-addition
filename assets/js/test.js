@@ -102,7 +102,7 @@ function roundComplete() {
         displayText += " " +  letterLine.toString().replace(/,/g, "");
 
         $(".prizeAnswer").html('<p class=" answerText center-text">' + displayText + '</p>');
-
+    
         imgGif();
         $(".imageClue").hide();
         $('.theGif').show();
@@ -146,7 +146,6 @@ function music () {
 //                   Main Process
 // ====================================================
 $(document).ready(function () {
-    
     // music();
     displayCurrentsentence();
     imagesClue();
@@ -165,7 +164,10 @@ $(document).ready(function () {
 
     // On clicking next, display the next sentence
     $(document).find(".nextBtn").on("click", function() {
-        
+        $('input:text').focus(
+            function(){
+                $(this).val('');
+        });
         if (lettersInWord.toString() != letterLine.toString()) {
             alert("You need to complete the sentence before moving on.");
         
