@@ -66,8 +66,8 @@ function displayCurrentsentence() {
 
     $(".sentence").html(sentence);
     var wordGuessed = $(".guess").html(letterLine.join("  "));
-    
-    $('#usr').val() = wordGuessed;
+
+    $('#usr').val(wordGuessed);
 
 }
 
