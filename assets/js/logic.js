@@ -96,7 +96,7 @@ function imgGif() {
 
 function roundComplete() {
 
-    $(".guess").html(letterLine.join("  "));
+    $(".guess").html(letterLine.join("  ").val());
 
     if (lettersInWord.toString() == letterLine.toString()) {
         // displaying word guessed once guessed correctly
