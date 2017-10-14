@@ -65,7 +65,7 @@ function displayCurrentsentence() {
     }
 
     $(".sentence").html(sentence);
-    $(".guess").html(letterLine.join("  "));
+    $(".guess").html(letterLine.join("  ").val());
 
 }
 
