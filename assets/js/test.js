@@ -42,6 +42,7 @@ var question = [{
 function displayCurrentsentence() {
     
     $(".prizeBG").hide();
+    $('#usr').val(" ");
 
     var sentence = question[currentsentence].sentence;
     var sentenceClass = $(document).find(".sentence");
@@ -177,6 +178,7 @@ $(document).ready(function () {
                 if (currentsentence < question.length) {
                     displayCurrentsentence();
                     imagesClue();
+                    roundComplete();
                     $(".imageClue").show();
                     $('.theGif').hide();
                 }  else {

@@ -42,6 +42,7 @@ var question = [{
 function displayCurrentsentence() {
     
     $(".prizeBG").hide();
+    $('#usr').val(" ");
 
     var sentence = question[currentsentence].sentence;
     var sentenceClass = $(document).find(".sentence");
@@ -164,10 +165,7 @@ $(document).ready(function () {
 
     // On clicking next, display the next sentence
     $(document).find(".nextBtn").on("click", function() {
-        $('input:text').focus(
-            function(){
-                $(this).val('');
-        });
+    ;
         if (lettersInWord.toString() != letterLine.toString()) {
             alert("You need to complete the sentence before moving on.");
         
@@ -177,6 +175,7 @@ $(document).ready(function () {
                 if (currentsentence < question.length) {
                     displayCurrentsentence();
                     imagesClue();
+                    roundComplete();
                     $(".imageClue").show();
                     $('.theGif').hide();
                 }  else {
