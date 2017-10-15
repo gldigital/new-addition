@@ -42,7 +42,6 @@ var question = [{
 function displayCurrentsentence() {
     
     $(".prizeBG").hide();
-    $('#usr').val(" ");
 
     var sentence = question[currentsentence].sentence;
     var sentenceClass = $(document).find(".sentence");
@@ -65,9 +64,7 @@ function displayCurrentsentence() {
     }
 
     $(".sentence").html(sentence);
-    var wordGuessed = $(".guess").html(letterLine.join("  "));
-
-    $('#usr').val(wordGuessed);
+    $(".guess").html(letterLine.join("  "));
 
 }
 
@@ -98,7 +95,7 @@ function imgGif() {
 
 function roundComplete() {
 
-    $(".guess").html(letterLine.join("  ").val());
+    $(".guess").html(letterLine.join("  "));
 
     if (lettersInWord.toString() == letterLine.toString()) {
         // displaying word guessed once guessed correctly
