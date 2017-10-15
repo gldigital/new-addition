@@ -17,6 +17,13 @@ p, h2 {
     
 }
 
+.startMenu {
+    background: #fff;
+    background-size: cover;
+    min-height: 900px;
+    width: 100%;
+}
+
 .btn-lg {
     margin-top: 25px;
 }
