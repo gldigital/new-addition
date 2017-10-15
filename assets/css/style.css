@@ -47,6 +47,10 @@ p, h2 {
     padding-top: 15px;
 }
 
+.answerText {
+    display: inline;
+}
+
 .imageClue img {
     width: 350px;
     padding-top: 20px;
