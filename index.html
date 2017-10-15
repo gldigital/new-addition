@@ -32,10 +32,17 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-6 questionAnswer">
                         <p class="sentence text-center pull-left"></p>
-                        <!-- <p class="guess text-center clearfix"></p> -->
-                        <div class="form-group">
-                            <input type="text" class=" guess form-control" id="usr">
-                        </div>
+                        <p class="clearfix"></p>
+                        <form id="game">
+                            <div class="input-group">
+                                <input type="text" class="guess form-control" id="usr">
+                                <div class="input-group-btn">
+                                <button class="btn btn-default" id="userInput" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-md-3">
                     </div>
@@ -46,7 +53,7 @@
             <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                            <button type="button" class="btn btn-primary btn-lg nextBtn center-block">Next Question</button>
+                            <!-- <button type="button" class="btn btn-primary btn-lg nextBtn center-block">Next Question</button> -->
                     </div>
                     <div class="col-md-4"></div>
                 </div>

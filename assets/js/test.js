@@ -29,7 +29,8 @@ var question = [{
 
 function displayCurrentsentence() {
     
-  
+    $("#usr").val("");
+
     var sentence = question[currentsentence].sentence;
     var sentenceClass = $(document).find(".sentence");
     var wordToGuess = question[currentsentence].word.length;
@@ -48,51 +49,35 @@ function displayCurrentsentence() {
 
 }
 
-function checkWord(){
-    
-$(document).find(".nextBtn").on("click", function() {
-    var goodGuess = $('#usr').val();
-    if (theWord == goodGuess){
-
-        displayText = " " +  goodGuess;
-        $(".prizeAnswer").html('<p class=" answerText center-text">' + displayText + '</p>');
-
-    } else {
-        alert('false');
-    }
-    
-    });
-}
-
 displayCurrentsentence();
 
 // On clicking next, display the next sentence
-$(document).find(".nextBtn").on("click", function() {
+$(document).find("#userInput").on("click", function() {
 
-         var goodGuess = $('#usr').val();
+        var goodGuess = $('#usr').val();
 
-        if (theWord != goodGuess) {
-            alert("You need to complete the sentence before moving on.");
-        
-            } else {
-                currentsentence++; // Since we have already displayed the first sentence on DOM ready
-                
-                if (currentsentence < question.length) {
-                    displayCurrentsentence();
-                    // imagesClue();
-                    displayText = " " +  goodGuess.replace(/,/g, "");
-                    $(".prizeAnswer").append('<p class=" answerText center-text">'  + displayText + " " + '</p>');
-                    // $(".imageClue").show();
-                    // $('.theGif').hide();
-                }  else {
-                    $(".sentence, .guess, .questionAnswer, .nextBtn, .jumbotron").hide();
-                    $(".theGif").hide();
-                    $(".imageClue").hide();
-                    $(".prizeAnswer").hide();
-                    $(".clue").hide();
-                    thePrize();
-                }
+    if (theWord != goodGuess) {
+        alert("You need to complete the sentence before moving on.");
+    
+        } else {
+            currentsentence++; // Since we have already displayed the first sentence on DOM ready
+            
+            if (currentsentence < question.length) {
+                displayCurrentsentence();
+                // imagesClue();
+                displayText = " " +  goodGuess;
+                $(".prizeAnswer").append('<p class=" answerText center-text">'  + displayText + " " + '</p>');
+                // $(".imageClue").show();
+                // $('.theGif').hide();
+            }  else {
+                $(".sentence, .guess, .questionAnswer, .nextBtn, .jumbotron").hide();
+                $(".theGif").hide();
+                $(".imageClue").hide();
+                $(".prizeAnswer").hide();
+                $(".clue").hide();
+                thePrize();
             }
-    });
+        }
+});
 
     
