@@ -100,6 +100,10 @@ function music () {
 //                   Main Process
 // ====================================================
 
+$('.prizeBG').hide();
+$('.gameSection').hide();
+
+
 displayCurrentsentence();
 imagesClue();
 
@@ -107,8 +111,16 @@ $(function() {
     $("form").submit(function() { return false; });
 });
 
+// On clicking next, display the game
+$(document).find(".startGame").on("click", function() {
 
-// On clicking next, display the next sentence
+   $('.startMenu').hide(1000);
+   $('.gameSection').show(1000);
+
+
+});
+
+// On clicking next, display the next correct word
 $(document).find("#userInput").on("click", function() {
 
     var goodGuess = $('#usr').val();
