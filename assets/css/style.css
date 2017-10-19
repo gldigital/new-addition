@@ -151,6 +151,21 @@ h2 {
     margin-left: 0px;
 }
 
+/* .facebook {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.facebook iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+} */
+
 @media all and (max-width: 1240px) {
     /* screen size until 1000px */
     .revealH {
