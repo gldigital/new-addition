@@ -1,112 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>New Addition</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
-    </head>
-    <body>
-         
-        <embed loop="true" src="assets/img/Fly away Copy.m4a" hidden="true" type="video/quicktime"></embed>
-        <div class="container-fluid startMenu">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Addition</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <embed loop="true" src="assets/img/Fly away Copy.m4a" hidden="true" type="video/quicktime"></embed>
+    <div class="container-fluid startMenu">
         <!-- beginning of start page -->
-            
-            <div class="jumbotron">
-                <div class="container">
-                    <h1>Hello, world!</h1>
-                    <p>Contents ...</p>
-                    <p>
-                        <a class="btn btn-primary btn-lg startGame">Start Game</a>
-                    </p>
+
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1>Welcome to New Addition</h1>
+                <p style="color: #000;">Click start when you are ready to play and discover what the "New Addition" is!</p>
+                <p>
+                    <a class="btn btn-primary btn-lg startGame">Start Game</a>
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid ">
+            <div class="row">
+                <!-- how to half -->
+                <div class="col-md-6 howToBg">
+
+                    <div class="howTo">
+                        <h2>How to Play</h2>
+                        <hr>
+                        <P>
+                            <i class="fa fa-ravelry" aria-hidden="true"></i>You will be given a sentence.</P>
+                        <P>
+                            <i class="fa fa-ravelry" aria-hidden="true"></i>Your goal is to complete the sentence with one word.</P>
+                        <P>
+                            <i class="fa fa-ravelry" aria-hidden="true"></i>You must start your word with a capital letter</P>
+                        <P>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>Awesome</P>
+                        <P>
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>awesome</P>
+                        <P>
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>AWESOME</P>
+                    </div>
+                </div>
+                <!-- music half -->
+                <div class="col-md-6 musicBg">
+
+                    <div class="music">
+                        <h2>Want Music?</h2>
+                        <hr>
+                        <p><strong>Song: </strong>Flye Away</p>
+                        <p><strong>Artist: </strong>Flye Away</p>
+                        <P>
+                            <button type="button" class="btn btn-success playMusic"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
+                            <button type="button" class="btn btn-danger playMusic"><i class="fa fa-stop-circle" aria-hidden="true"></i></button>
+                        </P>
+                    </div>
                 </div>
             </div>
-            
+        </div>
+
         <!--end of start page  -->
+    </div>
+
+    <div class="container gameSection ">
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="prizeAnswer text-center"></div>
+            </div>
+            <div class="col-md-3"></div>
         </div>
 
-        <div class="container gameSection ">
-                 
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="prizeAnswer text-center"></div>
-                </div>
-                <div class="col-md-3"></div>
+        <div class="row">
+            <!-- <div class="col-md-3"></div> -->
+            <div class="col-md-3"></div>
+            <div class="col-md-6 questionAnswer">
+                <p class="sentence text-center pull-left"></p>
+                <p class="clearfix"></p>
+                <form id="game">
+                    <div class="input-group">
+                        <input type="text" class="guess form-control" id="usr" autocomplete="off">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="userInput" type="button">
+                                <i class="glyphicon glyphicon-thumbs-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            
-            <div class="row">
-                    <!-- <div class="col-md-3"></div> -->
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 questionAnswer">
-                        <p class="sentence text-center pull-left"></p>
-                        <p class="clearfix"></p>
-                        <form id="game">
-                            <div class="input-group">
-                                <input type="text" class="guess form-control" id="usr" autocomplete="off">
-                                <div class="input-group-btn">
-                                <button class="btn btn-default" id="userInput" type="button">
-                                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                                </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-md-3">
-                    </div>
-                    
-                    <!-- <div class="col-md-3"></div> -->
+            <div class="col-md-3">
             </div>
 
-            <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                            <button type="button" class="btn btn-primary btn-lg nextBtn center-block">Next Question</button>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
-
-            <div class="row">
-                <div class="col-md-12 clue">
-                    <h2 class="text-center">Need a Clue?</h2>
-                    <div class="imageClue text-center"></div>
-                </div>
-                <div class="col-md-12">
-                    <div class=" theGif text-center"></div>
-                </div>
-            </div>   
-            
-            <!-- end of game -->
+            <!-- <div class="col-md-3"></div> -->
         </div>
-        <!-- start of prize -->
-        <div class="container-fluid prizeBG">
 
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- <img src="https://i.pinimg.com/736x/8b/a0/b5/8ba0b5fd949310c7e8e52eaa2c1d205b--gender-reveal-chalkboard-ideas-baseball-or-bows-gender-reveal-ideas.jpg" alt=""> -->
-                </div>
-                <div class="col-md-6">
-                    <h2 class="revealH">Ladden Family Adding One</h2>
-                    <p class="revealP">Little lady coming Feb. 2018</p>
-                    
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgreg.ladden.1%2Fposts%2F10154926925613807&width=500" width="500" height="174" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    <p class="fb">(back to Facebook. Let us know what you think!)</p>
-                </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-lg nextBtn center-block">Next Question</button>
             </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 clue">
+                <h2 class="text-center">Need a Clue?</h2>
+                <div class="imageClue text-center"></div>
+            </div>
+            <div class="col-md-12">
+                <div class=" theGif text-center"></div>
+            </div>
+        </div>
+
+        <!-- end of game -->
+    </div>
+    <!-- start of prize -->
+    <div class="container-fluid prizeBG">
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- <img src="https://i.pinimg.com/736x/8b/a0/b5/8ba0b5fd949310c7e8e52eaa2c1d205b--gender-reveal-chalkboard-ideas-baseball-or-bows-gender-reveal-ideas.jpg" alt=""> -->
+            </div>
+            <div class="col-md-6">
+                <h2 class="revealH">Ladden Family Adding One</h2>
+                <p class="revealP">Little lady coming Feb. 2018</p>
+
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgreg.ladden.1%2Fposts%2F10154926925613807&width=500"
+                    width="500" height="174" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                <p class="fb">(back to Facebook. Let us know what you think!)</p>
+            </div>
+        </div>
         <!-- end of prize -->
-        </div>
+    </div>
 
-          <!-- jQuery -->
-          <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="assets/js/logic.js"></script>
-      <!-- Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/logic.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
 </html>

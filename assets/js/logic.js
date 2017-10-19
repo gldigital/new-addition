@@ -25,13 +25,13 @@ var question = [{
     imageClue: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-0AliAZEYudZbT1YoblX3bgXveNfFfzFM8FkQhAJDzjWp-hAo"
 
 }];
- 
+
 // ====================================================
 //                   Functions
 // ====================================================
 
 function displayCurrentsentence() {
-    
+
     $("#usr").val("");
     $(".prizeBG").hide();
     $('.nextBtn').hide();
@@ -43,13 +43,13 @@ function displayCurrentsentence() {
     // // Remove all current <li> elements (if any)
     $(".sentence").find("p").remove();
 
-    
+
     for (i = 0; i < wordToGuess; i++) {
         selectedWord = question[currentsentence].word[i];
         theWord = selectedWord;
         console.log(theWord, "the word");
     }
-    
+
     $(".sentence").html(sentence);
 
 }
@@ -59,10 +59,10 @@ function imgGif() {
 }
 
 function roundComplete() {
-        imgGif();
-        $(".imageClue").hide();
-        $('.theGif').show();
-    
+    imgGif();
+    $(".imageClue").hide();
+    $('.theGif').show();
+
 }
 
 function thePrize() {
@@ -72,28 +72,28 @@ function thePrize() {
 
 function imagesClue() {
     var imgClue = question[currentsentence].imageClue;
-    
+
     console.log('imgclue', imgClue);
-    $(".imageClue").html('<img src="'+imgClue+'">');
+    $(".imageClue").html('<img src="' + imgClue + '">');
 }
 
-function music () {
+function music() {
     // Create an audio element with JavaScript
     var audioElement = document.createElement("audio");
-    
-        // Set it's source to the location
-        // of our Captain Planet theme song file.
-        audioElement.setAttribute("src", "assets/img/Fly away Copy.m4a");
 
-        // // Theme Button
-        // $(".theme-button").on("load", function() {
-            audioElement.play();
-        // });
+    // Set it's source to the location
+    // of our Captain Planet theme song file.
+    audioElement.setAttribute("src", "assets/img/Fly away Copy.m4a");
 
-        // Pause Button
-        $(".pause-button").on("click", function() {
-            audioElement.pause();
-        });
+    // // Theme Button
+    // $(".theme-button").on("load", function() {
+    audioElement.play();
+    // });
+
+    // Pause Button
+    $(".pause-button").on("click", function () {
+        audioElement.pause();
+    });
 }
 
 // ====================================================
@@ -107,56 +107,54 @@ $('.gameSection').hide();
 displayCurrentsentence();
 imagesClue();
 
-$(function() {
-    $("form").submit(function() { return false; });
+$(function () {
+    $("form").submit(function () {
+        return false;
+    });
 });
 
 // On clicking next, display the game
-$(document).find(".startGame").on("click", function() {
+$(document).find(".startGame").on("click", function () {
 
-   $('.startMenu').hide(1000);
-   $('.gameSection').show(1000);
+    $('.startMenu').hide(1000);
+    $('.gameSection').show(1000);
 
 
 });
 
 // On clicking next, display the next correct word
-$(document).find("#userInput").on("click", function() {
+$(document).find("#userInput").on("click", function () {
 
     var goodGuess = $('#usr').val();
 
     if (theWord != goodGuess) {
         alert("You need to complete the sentence before moving on.");
-    
-        } 
-        else 
-        {
-            if (theWord == goodGuess){
 
-                roundComplete();
-                displayText = " " +  goodGuess;
-                $(".prizeAnswer").append('<p class=" answerText center-text">'  + displayText + " " + '</p>');
-                $('.nextBtn').show();
-                $('#game').hide();
-                $('.sentence').hide();
+    } else {
+        if (theWord == goodGuess) {
 
-            }
+            roundComplete();
+            displayText = " " + goodGuess;
+            $(".prizeAnswer").append('<p class=" answerText center-text">' + displayText + " " + '</p>');
+            $('.nextBtn').show();
+            $('#game').hide();
+            $('.sentence').hide();
+
         }
+    }
 });
 
 // On clicking next, display the next sentence
-$(document).find(".nextBtn").on("click", function() {
-    
+$(document).find(".nextBtn").on("click", function () {
+
     var goodGuess = $('#usr').val();
-    
+
     if (theWord != goodGuess) {
         alert("You need to complete the sentence before moving on.");
-    
-        } 
-        else 
-        {
+
+    } else {
         currentsentence++; // Since we have already displayed the first sentence on DOM ready
-        
+
         if (currentsentence < question.length) {
             displayCurrentsentence();
             imagesClue();
@@ -166,8 +164,7 @@ $(document).find(".nextBtn").on("click", function() {
             $('#game').show();
             $('.sentence').show();
 
-        }  
-        else {
+        } else {
             $(".sentence, .guess, .questionAnswer, .nextBtn, .jumbotron").hide();
             $(".theGif").hide();
             $(".imageClue").hide();
@@ -177,6 +174,3 @@ $(document).find(".nextBtn").on("click", function() {
         }
     }
 });
-    
-
-    

@@ -1,8 +1,8 @@
 body {
-    background:  url("https://media.giphy.com/media/MYzDEybJ94M2Q/giphy.gif") no-repeat center center fixed; 
+    background: url("https://media.giphy.com/media/MYzDEybJ94M2Q/giphy.gif") no-repeat center center fixed;
     position: relative;
     background-size: cover;
-    height: 100%;
+    /* height: 100%; */
     margin: 0px;
 }
 
@@ -12,9 +12,17 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
-p, h2 {
+p,
+h2 {
     font-family: 'Oxygen', sans-serif;
-    
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.jumbotron {
+    margin: 0px;
 }
 
 .btn-lg {
@@ -23,12 +31,13 @@ p, h2 {
 
 .questionAnswer {
     padding: 20px 10px;
-
 }
 
-.sentence, .guess {
+.sentence,
+.guess {
     font-size: 30px;
-} 
+}
+
 .prizeAnswer {
     margin: 30px 0px;
     padding: 30px 10px;
@@ -55,11 +64,11 @@ p, h2 {
     width: 350px;
     padding-top: 20px;
     padding-bottom: 20px;
-    filter:blur(15px);
+    filter: blur(15px);
 }
 
 .imageClue:hover img {
-    filter:blur(0px);
+    filter: blur(0px);
 }
 
 .answerText {
@@ -84,27 +93,122 @@ p, h2 {
     font-size: 30px;
 }
 
-@media all and (max-width: 1000px) { /* screen size until 1000px */
-    .revealH {
-        font-size: 40px; 
-        }
-    }
-@media all and (max-width: 500px) { /* screen size until 500px */
-    .revealH {
-        font-size: 40px; 
-        }
-    }
+.fa {
+    padding: 5px;
+}
 
-    
-@media all and (max-width: 1000px) { /* screen size until 1000px */
-    .sentence, .guess {
+.fa-times-circle {
+    color: red;
+    margin-left: 20px;
+}
+
+.fa-check-circle {
+    color: green;
+    margin-left: 20px;
+}
+
+.howToBg {
+    background: #1f1e1e;
+    padding: 10px 120px;
+}
+ .howTo {
+    padding-left: 90px;
+    padding-right: 60px;
+    min-height: 420px;
+ }
+
+ .howTo p {
+     font-size: 16px;
+ }
+ .musicBg {
+    background: rgba(255, 255, 255, 0.61);
+    padding: 10px 120px; 
+}
+ .music {
+    padding-left: 90px;
+    padding-right: 60px;
+    min-height: 420px;
+ }
+ .music h2 {
+    color: #1f1e1e !important;
+ }
+ .music p {
+    color: #1f1e1e !important;
+    font-size: 20px;
+ }
+.playMusic {
+    padding: 20px 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+@media all and (max-width: 1240px) {
+    /* screen size until 1000px */
+    .revealH {
+        font-size: 40px;
+    }
+    .howTo {
+        padding: 10px 30px;
+    }
+    .music {
+        padding: 10px 30px;
+    }
+}
+@media all and (max-width: 900px) {
+    /* screen size until 1000px */
+    .revealH {
+        font-size: 40px;
+    }
+    .howToBg {
+        padding: 10px 30px;
+    }
+    .musicBg {
+        padding: 10px 30px;
+    }
+}
+@media all and (max-width: 768px) {
+    /* screen size until 1000px */
+    .revealH {
+        font-size: 40px;
+    }
+    .howTo {
+        padding: 10px 30px;
+    }
+    .music {
+        padding: 10px 30px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    /* screen size until 500px */
+    .revealH {
+        font-size: 40px;
+    }
+    .howTo {
+        padding: 10px 30px;
+    }
+    .music {
+        padding: 10px 30px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    /* screen size until 1000px */
+    .sentence,
+    .guess {
         font-size: 20px;
         padding: 20px 10px;
     }
-    }
-@media all and (max-width: 500px) { /* screen size until 500px */
-    .sentence, .guess {
+}
+
+@media all and (max-width: 500px) {
+    /* screen size until 500px */
+    .sentence,
+    .guess {
         font-size: 20px;
         padding: 20px 10px;
     }
-    }
+}
