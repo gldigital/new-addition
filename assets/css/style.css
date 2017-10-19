@@ -114,7 +114,8 @@ h2 {
  .howTo {
     padding-left: 90px;
     padding-right: 60px;
-    min-height: 420px;
+    min-height: 480px;
+    min-width: auto;
  }
 
  .howTo p {
@@ -127,7 +128,8 @@ h2 {
  .music {
     padding-left: 90px;
     padding-right: 60px;
-    min-height: 420px;
+    min-height: 480px;
+    min-width: auto;
  }
  .music h2 {
     color: #1f1e1e !important;
@@ -144,6 +146,10 @@ h2 {
     text-align: center;
 }
 
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
 @media all and (max-width: 1240px) {
     /* screen size until 1000px */

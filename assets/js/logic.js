@@ -90,6 +90,10 @@ function music() {
     audioElement.play();
     // });
 
+     // Pause Button
+     $(".play-button").on("click", function () {
+        audioElement.play();
+    });
     // Pause Button
     $(".pause-button").on("click", function () {
         audioElement.pause();
@@ -99,7 +103,7 @@ function music() {
 // ====================================================
 //                   Main Process
 // ====================================================
-
+music();
 $('.prizeBG').hide();
 $('.gameSection').hide();
 
