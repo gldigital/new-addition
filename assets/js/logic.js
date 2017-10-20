@@ -74,7 +74,7 @@ function imagesClue() {
     var imgClue = question[currentsentence].imageClue;
 
     console.log('imgclue', imgClue);
-    $(".imageClue").html('<img src="' + imgClue + '">');
+    $(".imageClue").html('<img class="imageClue" src="' + imgClue + '">');
 }
 
 function music() {

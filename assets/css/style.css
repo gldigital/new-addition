@@ -61,7 +61,6 @@ h2 {
 }
 
 .imageClue img {
-    width: 350px;
     padding-top: 20px;
     padding-bottom: 20px;
     filter: blur(15px);
@@ -109,7 +108,7 @@ h2 {
 
 .howToBg {
     background: #1f1e1e;
-    padding: 10px 120px;
+    padding: 10px 20px;
 }
  .howTo {
     padding-left: 90px;
@@ -123,7 +122,7 @@ h2 {
  }
  .musicBg {
     background: rgba(255, 255, 255, 0.61);
-    padding: 10px 120px; 
+    padding: 10px 20px; 
 }
  .music {
     padding-left: 90px;
@@ -151,47 +150,45 @@ h2 {
     margin-left: 0px;
 }
 
-/* .facebook {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.prizeImage {
+    margin-top: 10px;
+    border: 2px dashed white;
+    filter: drop-shadow(1px 1px 20px white)
 }
 
-.facebook iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-} */
-
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1024px) {
     /* screen size until 1000px */
     .revealH {
         font-size: 40px;
     }
     .howTo {
-        padding: 10px 30px;
+        padding: 10px 10px;
     }
     .music {
-        padding: 10px 30px;
+        padding: 10px 10px;
     }
+
+    .facebook {
+        width: 340px;
+    }
+    
 }
-@media all and (max-width: 900px) {
-    /* screen size until 1000px */
+@media all and (max-width: 920px) {
     .revealH {
         font-size: 40px;
     }
     .howToBg {
-        padding: 10px 30px;
+        padding: 10px 10px;
     }
     .musicBg {
-        padding: 10px 30px;
+        padding: 10px 10px;
+    }
+
+    .facebook {
+        width: 340px;
     }
 }
 @media all and (max-width: 768px) {
-    /* screen size until 1000px */
     .revealH {
         font-size: 40px;
     }
@@ -200,11 +197,14 @@ h2 {
     }
     .music {
         padding: 10px 30px;
+    }
+
+    .facebook {
+        width: 340px;
     }
 }
 
 @media all and (max-width: 500px) {
-    /* screen size until 500px */
     .revealH {
         font-size: 40px;
     }
@@ -214,10 +214,12 @@ h2 {
     .music {
         padding: 10px 30px;
     }
+    .facebook {
+        width: 340px;
+    }
 }
 
 @media all and (max-width: 1000px) {
-    /* screen size until 1000px */
     .sentence,
     .guess {
         font-size: 20px;
